@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.ball-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball-container > .ball {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    border-radius: 50px;
+    /* overflow: hidden; */
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+    background: #d0e4f7;
+    background: -moz-linear-gradient(-45deg, #d0e4f7 0%, #73b1e7 24%, #0a77d5 50%, #539fe1 79%, #87bcea 100%);
+    background: -webkit-linear-gradient(-45deg, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
+    background: linear-gradient(135deg, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=1 );
+}
+
+.ball-container > .ball:hover {
+    cursor: pointer;
+}
+
+
+.ball{
+    height: 100px;
+    width: 100px;
+    border-radius: 10em;
+    animation: pulse 0.7s easy-out;
+    position: absolute;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.wave {
+    background-color: aqua; 
+    border-radius: 10em;
+    animation: wave 0.7s ease-out;
+    transform: scale(0);
+    position: absolute;
+}
+
+
+@keyframes wave {
+    to {
+        transform: scale(2);
+        background-color: #fff;
+        opacity: 0;
+    }
+}
+
