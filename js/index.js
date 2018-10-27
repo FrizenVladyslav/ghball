@@ -2,7 +2,6 @@ const colors = ['red', 'green', 'aqua', 'pink', 'blue', 'yellow', '#336cc6', '#3
 selecredColor = 0;
 
 let ball = document.getElementById('ball');
-//     forEach = Array.prototype.forEach;
 
 ball.addEventListener('click', addElement)
 
