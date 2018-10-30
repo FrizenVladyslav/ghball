@@ -37,11 +37,11 @@ html, body {
     height: 100px;
     width: 100px;
     border-radius: 10em;
-    animation: pulse 0.7s easy-out;
+    top: 40%;
     position: absolute;
-    position: relative;
     transition: .5s;
     overflow: hidden;
+    animation-play-state: paused;
 }
 
 .wave {
@@ -50,6 +50,10 @@ html, body {
     animation: wave 0.7s ease-out;
     transform: scale(0);
     position: absolute;
+}
+
+.bounce{
+    animation: bounce 1.5s linear 0.1s;
 }
 
 
@@ -61,3 +65,30 @@ html, body {
     }
 }
 
+@keyframes bounce{
+    0% {
+        top: 40%;  
+    }
+    25% {
+        top: 90%;
+        height: 100px;
+        width: 100px;
+    }
+    30% {
+        top: 90%;
+        height: 35px;
+        width: 110px;
+    }
+    35%{
+        top: 80%;
+        height: 100px;
+        width: 100px;
+    }
+    70%{
+        top: 40%;
+    }
+    100%{
+        top: 40%;
+    }
+
+}

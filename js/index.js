@@ -3,10 +3,10 @@ selecredColor = 0;
 
 let ball = document.getElementById('ball');
 
-ball.addEventListener('click', addElement)
+ball.addEventListener('click', handleClick)
 
 
-function addElement(event) {
+function handleClick(event) {
     if(selecredColor > 9)
         selecredColor = 0;
     let addDiv  = document.createElement('div'),
@@ -18,9 +18,20 @@ function addElement(event) {
     sDiv.left  = event.clientX - rect.left - (mValue / 2) + 'px';
     sDiv.top   = event.clientY - rect.top - (mValue / 2) + 'px';
 
+    if(ball.classList.contains('bounce')){
+        ball.classList.remove('bounce');
+    }else{
+        ball.classList.add('bounce');
+    }
     addDiv.className = 'wave';
+    setTimeout(() => {
+        addDiv.className = '';
+        addDiv.className = 'wave';
+    }, 1600);
     addDiv.style.backgroundColor = colors[selecredColor];
-    selecredColor++
+    
+    selecredColor++;
+
 
     
     this.appendChild(addDiv);
